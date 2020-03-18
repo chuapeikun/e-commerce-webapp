@@ -32,6 +32,7 @@ const Header = ({ currentUser }) => (
 )
 
 // state is root-reducer
+// can destructure state -> { user } == state.user
 const mapStateToProps = state => ({
   currentUser: state.user.currentUser
 });
