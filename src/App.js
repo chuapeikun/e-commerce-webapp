@@ -35,7 +35,7 @@ class App extends React.Component {
           });
         });
       } else{
-        setCurrentUser(userAuth)
+        setCurrentUser(userAuth);
       }
     })
   }
@@ -73,7 +73,7 @@ class App extends React.Component {
 // state is root-reducer
 // can destructure state -> { user } == state.user
 const mapStateToProps = createStructuredSelector({
-  currentUser: selectCurrentUser
+  currentUser: selectCurrentUser,
 });
 
 const mapDispatchToProps = dispatch => ({
