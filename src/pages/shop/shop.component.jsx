@@ -25,7 +25,7 @@ class ShopPage extends React.Component {
     const { updateCollections } = this.props;
     const collectionRef = firestore.collection('collections');
 
-    this.unsubscribeFromSnapshot = collectionRef.onSnapshot(async snapShot => {
+    collectionRef.get().then(snapShot => {
       const collectionMap = convertCollectionSnapshotToMap(snapShot);
       updateCollections(collectionMap);
       this.setState({ loading: false });
@@ -49,7 +49,7 @@ class ShopPage extends React.Component {
 
 const mapDispatchToProps = dispatch => ({
   updateCollections: collectionMap =>
-    updateCollections(collectionMap)
+    dispatch(updateCollections(collectionMap))
 })
 
 export default connect(null, mapDispatchToProps)(ShopPage);
