@@ -41,6 +41,8 @@ const Header = ({ currentUser, hidden }) => (
   </HeaderContainer>
 )
 
+// state is the root reducer
+// state.user.currentUser
 // const mapStateToProps = state => ({
 //   currentUser: selectCurrentUser(state),
 //   hidden: selectCartHidden(state)
