@@ -55,6 +55,7 @@ class App extends React.Component {
 // const mapStateToProps = state => ({
 // state is root-reducer
 // can destructure state -> { user } == state.user
+
 const mapStateToProps = createStructuredSelector({
   currentUser: selectCurrentUser,
 });
